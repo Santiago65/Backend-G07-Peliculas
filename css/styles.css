@@ -564,6 +564,7 @@ color: white;
         padding: var(--spacing-5) var(--spacing-5);
         border: 4px solid white;
         font-size:20px;
+        color: white;
         background-color: transparent;
         &:focus{
           border: 2px solid rgba(98, 35, 180, 0.836);
