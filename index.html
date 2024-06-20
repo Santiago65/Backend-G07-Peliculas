@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAC-MOVIES</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    </head>
+<body>
+  <main id="main" class="main"></main>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+      <i class="fas fa-film" aria-hidden="true"></i>&nbsp &nbsp &nbsp<span class="tex">CAC-Movies</span>
+      <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#tendencias"><span class="tex">Tendencias</span></a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Registrarse</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Iniciar Sesión</a>
+              </li> -->
+              <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"><span class="tex">Registrarse</span></button>
+
+              &nbsp &nbsp <!-- Agrega unholl espacio o un salto de línea entre los botones -->
+              
+              <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@fat"><span class="tex">Iniciar Sesión</span></button>
+              
+
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Nombre de usuario:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Contraseña:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content dark-bg"> <!-- Agregamos la clase "dark-bg" aquí -->
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="registrationForm">
+          <div class="mb-3">
+            <label for="username" class="form-label">Nombre de Usuario</label>
+            <input type="text" class="form-control" id="username">
+            <div class="invalid-feedback" id="usernameError"></div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email">
+            <div class="invalid-feedback" id="emailError"></div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password">
+            <div class="invalid-feedback" id="passwordError"></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content dark-bg"> <!-- Agregamos la clase "dark-bg" aquí -->
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel2">Iniciar Sesíon</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="username" class="form-label">Nombre de Usuario</label>
+            <input type="text" class="form-control" id="username">
+            <div class="invalid-feedback" id="usernameError"></div>
+          </div>
+          <!-- <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Nombre de usuario:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div> -->
+          <!-- <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label> -->
+            <!-- <input type="email" class="form-control" id="email" required>
+            <div class="invalid-feedback" id="emailError"></div> -->
+          <!-- </div> -->
+          <div class="mb-3">
+            <!-- <label for="message-text" class="col-form-label">Contraseña:</label>
+            <textarea class="form-control" id="message-text"></textarea> -->
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password">
+            <div class="invalid-feedback" id="passwordError"></div>
+            
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li> -->
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Buscar Película" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="d-none d-sm-block">
+        <iframe class="w-100" id="video-placeholder" frameborder="0" allowfullscreen="1" title="YouTube video player" width="600" height="700" src="https://www.youtube.com/embed/01UXuz00UkI?si=8J4HGJVwncV-6-JU" ></iframe>
+     </div>
+     <section id="clima"data-aos="fade-up" data-aos-offset="400" data-aos-delay="100" data-aos-duration="1000">
+      <div class="clima">
+        <div id="tiempo">
+          <div class="container mt-5">
+            <h1>Clima de mi ciudad</h1>
+            <div class="input-group mb-3">
+              <select id="cityName" class="form-select">
+                <option value="Buenos Aires">Buenos Aires</option>
+                <option value="Tucumán">Tucumán</option>
+                <option value="Mendoza">Mendoza</option>
+                <option value="Salta">Salta</option>
+                <option value="Jujuy">Jujuy</option>
+                <option value="Córdoba Argentina">Cordoba</option>
+                <option value="Chubut">Chubut</option>
+                <option value="Formosa Argentina">Formosa</option>
+                <option value="Corrientes">Corrientes</option>
+                <option value="Chaco">Chaco</option>
+                <option value="Misiones">Misiones</option>
+                <option value="Santiago del Estero">Santiago del Estero</option>
+                <option value="Neuquén">Neuquén</option>
+                <option value="Rio Negro">Rio Negro</option>
+                <option value="Tierra del Fuego">Tierra del Fuego</option>
+                <option value="Islas Malvinas">Islas Malvinas</option>
+                <option value="Santa Cruz Argentina">Santa Cruz</option>
+                <option value="Entre Rios">Entre Rios</option>
+                <option value="Santa Fe Argentina">Santa Fe</option>
+                <option value="San Juan Argentina">San Juan</option>
+                <option value="La Rioja Argentina">La Rioja</option>
+                <option value="Catamarca Argentina">Catamarca</option>
+                <option value="Usuhaia">Usuhaia</option>
+                <option value="San Luis Argentina">San Luis</option>
+                <option value="La Pampa">La Pampa</option>
+                <option value="Capital Federal Argentina">Ciudad Autónoma de Buenos Aires</option>
+                
+              </select>
+              <button class="btn btn-primary" id="getWeatherBtn">Obtener Clima</button>
+            </div>
+            <div id="weatherInfo" class="mt-3">
+              <!-- Información del clima se mostrará aquí -->
+            </div>
+            <!-- <div class="input-group mb-3">
+              <input type="text" id="cityName" class="form-control" placeholder="Ingresa el nombre de tu ciudad">
+              <button class="btn btn-primary" id="getWeatherBtn">Obtener Clima</button>
+            </div>
+            <div id="weatherInfo" class="mt-3">
+              <!-- Información del clima se mostrará aquí -->
+            </div> 
+          </div>
+
+        </div>
+      </div>
+
+     </section>
+     <section id="tendencias" data-aos="fade-up" data-aos-offset="400" data-aos-delay="100" data-aos-duration="1000" class="peliculasTendencia">
+      <div class="container">
+        <div id="tendencia"></div>
+        <h1 class="main-content" >Las tendencias de hoy</h1>
+        <div class="row">
+          <div class="col-md-3 mb-3 mb-5">
+            
+            <a href="pelicula.html"><img class="imagen ,img-fluid" src="./assets/images/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" ></a>
+          </div>
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid"  src="./assets/images/8QVDXDiOGHRcAD4oM6MXjE0osSj.jpg"></a>
+          </div>
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid"  src="./assets/images/cxevDYdeFkiixRShbObdwAHBZry.jpg"></a>
+          </div>
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid"  src="./assets/images/fdZpvODTX5wwkD0ikZNaClE4AoW.jpg"></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid"  src="./assets/images/hu40Uxp9WtpL34jv3zyWLb5zEVY.jpg"></a>
+          </div>
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid"  src="./assets/images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg"></a>
+          </div>
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid"  src="./assets/images/cover1.jpg"></a>
+          </div>
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid"  src="./assets/images/cover10.jpg"></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid"  src="./assets/images/cover11.jpg"></a>
+          </div>
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid"  src="./assets/images/cover9.jpg"></a>
+          </div>
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid"  src="./assets/images/cover12.jpg"></a>
+          </div>
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid" src="./assets/images/cover13.jpg" ></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid"  src="./assets/images/cover4.jpg"></a>
+          </div>
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid"  src="./assets/images/cover2.jpeg"></a>
+          </div>
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid"  src="./assets/images/cover5.jpg"></a>
+          </div>
+          <div class="col-md-3 mb-3 mb-5">
+            <a href="pelicula.html"><img class="imagen ,img-fluid"  src="./assets/images/cover6.jpg"></a>
+          </div>
+        </div>
+    </div>
+  </section>
+      <footer class="mt-4 footer">
+        <!-- <nav class="navbar navbar-dark bg-dark"> -->
+          <nav class="nav nav-pills flex-column flex-sm-row">
+          <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Términos y condiciones</a>
+                    
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                  
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Promociones</a>
+                
+            </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Preguntas frecuentes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ayuda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Administrador Peliculas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Quienes somos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contáctenos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Teléfonos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> <i class="fa fa-facebook" aria-hidden="true"> </i></a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" href="#"> <i class="fa fa-github" aria-hidden="true"> </i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"> <i class="fa fa-twitter" aria-hidden="true"> </i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"> <i class="fa fa-linkedin" aria-hidden="true"> </i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"> <i class="fa fa-instagram" aria-hidden="true"> </i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"> <i class="fa fa-whatsapp" aria-hidden="true"> </i></a>
+    </li>
+            </ul>
+            
+        </nav>
+        <a href="#main" class="text-center d-block mt-4">
+            <img src="./assets/images/flecha-hacia-arriba.png" alt="ir arriba flecha">
+        </a>
+    </footer>
+    <script src="./js/clima.js"> </script>
+    <script src="./js/registro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
