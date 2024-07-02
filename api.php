@@ -43,7 +43,11 @@ switch ($method) {
         if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
             $imagen = $_FILES['imagen']['name'];
             $temp_name = $_FILES['imagen']['tmp_name'];
-            $upload_dir = 'C:/xampp/htdocs/comision_24143/pruebafront/uploads/';  // Ruta absoluta de la carpeta uploads
+            $upload_dir = __DIR__ . '/uploads/';  // Ruta del directorio de subida en el servidor
+
+            if (!is_dir($upload_dir)) {
+                mkdir($upload_dir, 0755, true);
+            }
 
             if (move_uploaded_file($temp_name, $upload_dir . $imagen)) {
                 $titulo = $_POST['titulo'];
@@ -80,7 +84,11 @@ switch ($method) {
         if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
             $imagen = $_FILES['imagen']['name'];
             $temp_name = $_FILES['imagen']['tmp_name'];
-            $upload_dir = 'C:/xampp/htdocs/comision_24143/pruebafront/uploads/';  // Ruta absoluta de la carpeta uploads
+            $upload_dir = __DIR__ . '/uploads/';  // Ruta del directorio de subida en el servidor
+
+            if (!is_dir($upload_dir)) {
+                mkdir($upload_dir, 0755, true);
+            }
 
             if (move_uploaded_file($temp_name, $upload_dir . $imagen)) {
                 $imagen = 'uploads/' . $imagen;  // Ruta relativa para almacenar en la base de datos
